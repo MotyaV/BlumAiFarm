@@ -1,0 +1,5 @@
+pyautogui
+ultralytics
+opencv-python
+mouse
+pywin32
