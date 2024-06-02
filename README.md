@@ -1,4 +1,4 @@
 1. Download raw
 2. Install requirements
-3. Start farm.py
-4. Follow instrucions given in the cmd
+3. Start farm.py (python farm.py in the cmd or .bat file)
+4. Follow instructions given in the cmd
