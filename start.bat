@@ -1,2 +1,2 @@
 python farm.py
-pause
+pause 
