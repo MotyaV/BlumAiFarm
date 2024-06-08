@@ -8,9 +8,11 @@ import win32gui
 import win32con
 import torch
 
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+if torch.cuda.is_available():
+	model = YOLO("best.pt").to('cuda')
+else:
+	model = YOLO("best.pt").to(device)
 
-model = YOLO("best.pt").to(device)
 
 screen_width, screen_height = pyautogui.size()
 center_x, center_y = screen_width // 2, screen_height // 2
