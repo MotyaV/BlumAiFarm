@@ -11,7 +11,7 @@ import torch
 if torch.cuda.is_available():
 	model = YOLO("best.pt").to('cuda')
 else:
-	model = YOLO("best.pt").to(device)
+	model = YOLO("best.pt")
 
 
 screen_width, screen_height = pyautogui.size()
