@@ -6,8 +6,13 @@ import numpy as np
 import mouse
 import win32gui
 import win32con
+import torch
 
-model = YOLO("best.pt")
+if torch.cuda.is_available():
+	model = YOLO("best.pt").to('cuda')
+else:
+	model = YOLO("best.pt")
+
 
 screen_width, screen_height = pyautogui.size()
 center_x, center_y = screen_width // 2, screen_height // 2
